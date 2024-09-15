@@ -1,49 +1,40 @@
 <style>
-    /* Responsividade para celulares */
-    @media (max-width: 600px) {
-      main {
-        padding: 1rem;
-      }
+body, html {
+padding:8px;
+margin:0;}
 
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        width: 100%;
-        background-image: url("https://i.imgur.com/qRfYd2s.gif");
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+.box1 {
+display:flex;
+justify-content:space-between;
+padding:8px;
+background:#eee;
+color:#555;}
 
-      .box1 {
-        padding: 15px;
-        background: #fff;
-        color: #333;
-        border-radius: 8px;
-        text-align: center;
-        width: calc(100% - 40px);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      }
+.box1_a {padding:8px;}
+.box1_a p {padding:0px;}
+.box1 .saldo1, .box1 .saldo2 {color:blue;}
+.box1 .saldo1, .box1 .label1 {text-align:start;}
+.box1 .saldo2, .box1 .label2 {text-align:end;}
+</style>
 
-      .box1 img {
-        height: 50px;
-        max-width: 100%;
-      }
 
-      .box1 p {
-        margin: 10px 0;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="box1">
-    <img src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="Avatar">
-    <p>Name: Usuário</p>
-    <p>Login: 110946520</p>
-  </div>
-</body>
-</html>
+
+
+
+
+
+
+
+<div class="box1">
+
+<div class="box1_a">
+<p class="label1">Saldo disponível</p>
+<p class="saldo1">R$ 1.543,92</p>
+</div>
+
+<div class="box1_a">
+<p class=label2>Agendado até 30/set</p>
+<p class="saldo2">R$ 0,00</p>
+</div>
+
+</div>
