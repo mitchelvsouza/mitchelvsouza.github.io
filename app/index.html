@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance - App</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+
 <style>
 body, html {
 padding:8px;
@@ -21,6 +25,15 @@ color:#555;}
 .box1 .saldo1, .box1 .saldo2 {color:blue;}
 .box1 .saldo1, .box1 .label1 {text-align:start;}
 .box1 .saldo2, .box1 .label2 {text-align:end;}
+
+.box2 {
+display:flex;
+justify-content:center;
+color:blue;}
+
+.box2 i {
+padding:4px;
+font-size:1.9rem;}
 </style>
 
 
@@ -31,10 +44,16 @@ color:#555;}
 </body>
 
 
-
+<header>
+<span>Olá, Michel</span>
+<div>
+<i class="fa-regular fa-envelope"></i>
+<i class="fa-solid fa-comment-dots"></i>
+<i class="fa-solid fa-right-from-bracket"></i>
+</div>
+</header>
 
 <div class="box1">
-
 <div class="box1_a">
 <p class="label1">Saldo disponível</p>
 <p class="saldo1">R$ 1.543,92</p>
@@ -44,10 +63,24 @@ color:#555;}
 <p class=label2>Agendado até 30/set</p>
 <p class="saldo2">R$ 0,00</p>
 </div>
-
 </div>
 
+<div class="box2">
+<div>
+<p>
+<i class="fa-solid fa-house"></i>
+<i class="fa-solid fa-chart-bar"></i>
+<i class="fa-solid fa-chart-pie"></i>
+<i class="fa-solid fa-cart-plus"></i>
+</p>
 
+<p>
+<i class="fa-regular fa-square-plus"></i>
+<i class="fa-solid fa-heart-pulse"></i>
+<i class="fa-solid fa-file-circle-plus"></i>
+<i class="fa-solid fa-plug-circle-check"></i>
+</p>
+</div>
 
 </body>
 </html>
