@@ -14,36 +14,41 @@ padding:8px;
 margin:0;}
 
 header {
+font-family:Roboto;
 display:flex;
 justify-content:space-between;
+align-items:center;
 margin:-16px -16px 16px;
 padding:10px;
-background:blue;
+background:#2058ae;
 color:#fff;}
+
+header img {margin-right:4px; height:20px;}
 
 header i {padding:3px;}
 
 .box1 {
+font-family:Roboto;
 display:flex;
 justify-content:space-between;
 padding:8px;
-background:#eee;
-color:#555;}
+background:#e7edf6;
+color:#666;}
 
 .box1_a {padding:8px;}
 .box1_a p {padding:0px;}
-.box1 .saldo1, .box1 .saldo2 {color:blue;}
+.box1 .saldo1, .box1 .saldo2 {color:#0051ce;}
 .box1 .saldo1, .box1 .label1 {text-align:start;}
 .box1 .saldo2, .box1 .label2 {text-align:end;}
 
 .box2 {
 display:flex;
-justify-content:center;
-color:blue;}
+justify-content:center;}
 
 .box2 i {
 padding:4px;
-background:#ccc;
+background:#e7edf6;
+color:#2058ae;
 border-radius:50%;
 padding:14px;
 font-size:1.9rem;}
@@ -56,7 +61,7 @@ bottom:0;
 width:100%;
 padding:15px;
 margin:0px -20px auto;
-background:blue;}
+background:#2058ae;}
 
 footer i {
 font-size:1.9rem;
@@ -91,7 +96,10 @@ console.warn('Erro ao registrar o Service Worker', err);
 
 
 <header>
+<div>
+<img src="https://i.imgur.com/m5svfuB.png">
 <span>Olá, Michel Souza</span>
+</div>
 <div>
 <i class="fa-regular fa-envelope"></i>
 <i class="fa-solid fa-comment-dots"></i>
