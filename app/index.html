@@ -67,6 +67,10 @@ footer i {
 font-size:1.9rem;
 color:#f5f5f5;
 margin:0px 25px auto;}
+
+ul {display:flex; list-style:none;}
+li {text-align:center;}
+li label {text-align:center; color:#fff;}
 </style>
 
 
@@ -139,10 +143,28 @@ console.warn('Erro ao registrar o Service Worker', err);
 </div>
 
 <footer>
+<ul>
+<li>
 <i class="fa-solid fa-house"></i>
+<label>Home</label>
+</li>
+
+<li>
 <i class="fa-solid fa-chart-bar"></i>
+<label>Report</label>
+</li>
+
+<li>
 <i class="fa-solid fa-chart-pie"></i>
+<label>Chart</label>
+</li>
+
+<li>
 <i class="fa-solid fa-cart-plus"></i>
+<label>Shopping</label>
+</li>
+</ul>
+
 </footer>
 
 </body>
