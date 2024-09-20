@@ -54,13 +54,10 @@ padding:14px;
 font-size:1.9rem;}
 
 footer {
-display:flex;
 position:fixed;
-justify-content:space-between;
 bottom:0;
+margin:0px -16px auto;
 width:100%;
-padding:15px;
-margin:0px -20px auto;
 background:#2058ae;}
 
 footer i {
@@ -68,8 +65,8 @@ font-size:1.9rem;
 color:#f5f5f5;
 margin:0px 25px auto;}
 
-ul {display:flex; list-style:none;}
-li {text-align:center;}
+ul {display:flex; list-style:none; justify-content:space-between;}
+li {display:flex; flex-direction:column; text-align:center;}
 li label {text-align:center; color:#fff;}
 </style>
 
@@ -144,23 +141,29 @@ console.warn('Erro ao registrar o Service Worker', err);
 
 <footer>
 <ul>
+
 <li>
-<i class="fa-solid fa-house"></i>
+<i class="fa-light fa-bars"></i>
+<label>Menu</label>
+</li>
+
+<li>
+<a href="https://www.biopontual.com"><i class="fa-light fa-house"></i></a>
 <label>Home</label>
 </li>
 
 <li>
-<i class="fa-solid fa-chart-bar"></i>
+<i class="fa-light fa-chart-bar"></i>
 <label>Report</label>
 </li>
 
 <li>
-<i class="fa-solid fa-chart-pie"></i>
+<i class="fa-light fa-chart-pie"></i>
 <label>Chart</label>
 </li>
 
 <li>
-<i class="fa-solid fa-cart-plus"></i>
+<i class="fa-light fa-cart-plus"></i>
 <label>Shopping</label>
 </li>
 </ul>
