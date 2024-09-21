@@ -91,13 +91,11 @@ li label {display:flex; color:#fff;}
 
 
 <script>
-if ('serviceWorker' in navigator) {
-navigator.serviceWorker.register('/sw.js')
-.then(function(reg) {
-console.log('Service Worker registrado com sucesso', reg);
-}).catch(function(err) {
-console.warn('Erro ao registrar o Service Worker', err);
-});
+function function_abrir_menu() {
+const nav = document.querySelector('nav');
+if (nav.style.display === 'block') {
+nav.style.display = 'none';}
+else {nav.style.display = 'block';}
 }
 </script>
 
@@ -183,7 +181,7 @@ console.warn('Erro ao registrar o Service Worker', err);
 <ul>
 
 <li>
-<a href="#" onclick="document.querySelector('nav').style.display='block'; return false;">
+<a onclick="function_abrir_menu();">
 <i class="fa-light fa-bars"></i>
 </a>
 <label>Menu</label>
