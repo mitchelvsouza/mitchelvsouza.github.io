@@ -1,230 +1,170 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Finance - App</title>
-
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
-
 <style>
-body, html {
-height:100%;
-padding:0;
-margin:0;}
+body {
+background:#777;
+font-family: Arial, sans-serif;}
 
-header {
-font-family:Roboto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin:0;
-padding:15px;
-background:#2058ae;
-color:#fff;}
+.tabs {
+display: flex;
+color: #777;
+cursor: pointer;
+background-color: #777;}
 
-header img {margin-right:4px; height:20px;}
+.tabs div {
+margin-right: 10px;
+border-top-right-radius:6px;
+border-top-left-radius:6px;
+padding: 10px;
+background-color: #ddd;
+border: 1px solid #ccc;}
 
-header i {padding:3px;}
+.tabs div.active {
+color:#333;
+font-weight:bolder;
+background-color: white;
+border-bottom: none;}
 
-.box1 {
-font-family:Roboto;
-display:flex;
-justify-content:space-between;
-padding:8px;
-margin:12px;
-background:#e7edf6;
-color:#666;}
+.tab-content {
+background:#fff;
+display: none;
+padding: 20px;
+border-left:1px solid #ccc;
+border-right:1px solid #ccc;
+border-bottom:1px solid #ccc;
+border-top-right-radius:8px;
+border-bottom-right-radius:8px;
+border-bottom-left-radius:8px;}
 
-.box1_a {padding:8px;}
-.box1_a p {padding:0px;}
-.box1 .saldo1, .box1 .saldo2 {color:#0051ce;}
-.box1 .saldo1, .box1 .label1 {text-align:start;}
-.box1 .saldo2, .box1 .label2 {text-align:end;}
-
-.box2 {display:flex; justify-content:center;}
-
-.box2 i {
-padding:4px;
-background:#e7edf6;
-color:#2058ae;
-border-radius:50%;
-padding:14px;
-font-size:1.9rem;}
-
-nav {
-display:none;
-position:fixed;
-top:54px;
-background:#ccc;
-justify-content:center;
-margin:0;
-padding:0;
-width:150px;
-height:90vh;}
-
-nav ul {
-display:flex;
-flex-direction:column;
-margin:0;
-padding:0;}
-
-nav li {padding:8px;}
-
-footer {
-position:fixed;
-bottom:0;
-margin:0;
-padding:0;
-width:100%;
-background:#2058ae;}
-
-.fecharMenu {display:flex; justify-content:center; padding:8px;}
-.fecharMenu i {font-size:1.5rem;}
-
-footer i {font-size:1.9rem; color:#f5f5f5;}
-ul {display:flex; justify-content:space-between; list-style:none;}
-li {padding:0px; margin:0; text-align:center;}
-li label {display:flex; color:#fff;}
+.tab-content.active {display: block;}
+table {width: 100%; border-collapse: collapse;}
+th, td {text-align:start; padding: 10px; border: 1px solid #ccc;}
+th {background-color: #f1f1f1;}
 </style>
 
 
+
+
+
+
+
+<h1>Teste</h1>
+<a href="iframe.html">Iframe</a>
+
+
+
+
+
+
+
+
+<div class="tabs">
+<div class="tab active" data-tab="tab1">Pasta 01</div>
+<div class="tab" data-tab="tab2">Pasta 02</div>
+<div class="tab" data-tab="tab3">Pasta 03</div>
+<div class="tab" data-tab="tab4">Pasta 04</div>
+<div class="tab" data-tab="tab5">Pasta 05</div>
+</div>
+
+<div id="tab1" class="tab-content active">
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Location</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Event Alpha</td>
+<td>New York</td>
+<td>09:00am - 05:00pm</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beta</td>
+<td>10:00am - 06:00pm</td>
+<td>10:00am - 06:00pm</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="tab2" class="tab-content">
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Location</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alpha</td>
+<td>New York</td>
+<td>09:00am - 05:00pm</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Event Beta</td>
+<td>10:00am - 06:00pm</td>
+<td>06:00pm</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="tab3" class="tab-content">
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Location</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Event Alpha</td>
+<td>New York</td>
+<td>09:00am - 05:00pm</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Beta</td>
+<td>06:00pm</td>
+<td>06:00pm</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="tab4" class="tab-content">
+<img src="page.html">
+</div>
+
+<div id="tab5" class="tab-content">
+<iframe scr="https://www.renovabioenergia.com.br/php"></iframe>
+</div>
+
 <script>
-function abrir_menu() {
-const nav = document.querySelector('nav');
-if (nav.style.display === 'block') {
-nav.style.display = 'none';}
-else {nav.style.display = 'block';}
-}
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.tab-content');
+
+tabs.forEach(tab => {
+tab.addEventListener('click', () => {
+tabs.forEach(t => t.classList.remove('active'));
+contents.forEach(c => c.classList.remove('active'));
+
+tab.classList.add('active');
+
+document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+});
+});
 </script>
-
-
-
-
-
-
-</head>
-<body>
-
-
-
-
-
-
-
-<header>
-<div>
-<img src="https://i.imgur.com/m5svfuB.png">
-<span>Olá, Michel Souza</span>
-</div>
-<div>
-<a onclick="window.location.reload()" style="cursor:pointer;"><i class="fa-solid fa-arrows-rotate"></i>Atualizar</a>
-<i class="fa-regular fa-envelope"></i>
-<i class="fa-solid fa-comment-dots"></i>
-<i class="fa-solid fa-right-from-bracket"></i>
-</div>
-</header>
-
-<div class="box1">
-<div class="box1_a">
-<p class="label1">Saldo disponível</p>
-<p class="saldo1">R$ 1.543,92</p>
-</div>
-
-<div class="box1_a">
-<p class=label2>Agendado até 30/set</p>
-<p class="saldo2">R$ 0,00</p>
-</div>
-</div>
-
-<div class="box2">
-<div>
-<p>
-<i class="fa-solid fa-house"></i>
-<i class="fa-solid fa-chart-bar"></i>
-<i class="fa-solid fa-chart-pie"></i>
-<i class="fa-solid fa-cart-plus"></i>
-</p>
-
-<p>
-<i class="fa-regular fa-square-plus"></i>
-<i class="fa-solid fa-heart-pulse"></i>
-<i class="fa-solid fa-file-circle-plus"></i>
-<i class="fa-solid fa-plug-circle-check"></i>
-</p>
-</div>
-</div>
-
-
-<nav>
-
-<div class="fecharMenu">
-<a href="#" onclick="document.querySelector('nav').style.display='none'; return false;">
-<i class="fa-solid fa-circle-xmark"></i>
-</a>
-</div>
-
-<ul>
-<li>Link1</li>
-<li>Link1</li>
-<li>Link1</li>
-<li>Link1</li>
-<li>Link1</li>
-<li>Link1</li>
-<li>Link1</li>
-<li>Link1</li>
-</ul>
-</nav>
-
-<footer>
-<ul>
-
-<li>
-<a href="#" onclick="abrir_menu();">
-<i class="fa-light fa-bars"></i>
-</a>
-<label>MenuS</label>
-</li>
-
-<li>
-<a href="https://www.biopontual.com"><i class="fa-light fa-house"></i></a>
-<label>Home</label>
-</li>
-
-<li>
-<i class="fa-light fa-chart-bar"></i>
-<label>Report</label>
-</li>
-
-<li>
-<i class="fa-light fa-chart-pie"></i>
-<label>Chart</label>
-</li>
-
-<li>
-<i class="fa-light fa-cart-plus"></i>
-<label>Shopping</label>
-</li>
-</ul>
-
-</footer>
-
-
-<!-- PAGINAS PAGINAS PAGINAS PAGINAS -->
-<!-- PAGINAS PAGINAS PAGINAS PAGINAS -->
-<!-- PAGINAS PAGINAS PAGINAS PAGINAS -->
-<!-- PAGINAS PAGINAS PAGINAS PAGINAS -->
-
-<div class="home" style="display:none;">
-<h1>Pagina Home</h1>
-<img src="https://www.renovabioenergia.com.br/loading1.gif">
-</div>
-
-
-<!-- PAGINAS PAGINAS PAGINAS PAGINAS -->
-<!-- PAGINAS PAGINAS PAGINAS PAGINAS -->
-<!-- PAGINAS PAGINAS PAGINAS PAGINAS -->
-<!-- PAGINAS PAGINAS PAGINAS PAGINAS -->
-</body>
-</html>
